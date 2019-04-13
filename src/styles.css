@@ -1,0 +1,391 @@
+@import '../node_modules/ng2-slim-loading-bar/style.css';
+*{margin:0; padding: 0;}
+
+ /* font Face */
+ @font-face {
+    font-family: 'Aller';
+    src: url('assets/fonts/Aller-Regular.woff2') format('woff2'),
+        url('assets/fonts/Aller-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('assets/fonts/Aller-Bold.woff2') format('woff2'),
+        url('assets/fonts/Aller-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('assets/fonts/Aller-Light.woff2') format('woff2'),
+        url('assets/fonts/Aller-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-LightItalic.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-SemiBoldItalic.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Light.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/OpenSans-Italic.woff2') format('woff2'),
+        url('assets/fonts/OpenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Bold.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+        url('assets/fonts/Raleway-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-LightItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Light.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/Raleway-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-ExtraLightItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-ExtraLight.woff2') format('woff2'),
+        url('assets/fonts/Raleway-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Black.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Medium.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Italic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Regular.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-Thin.woff2') format('woff2'),
+        url('assets/fonts/Raleway-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway-BlackItalic.woff2') format('woff2'),
+        url('assets/fonts/Raleway-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+ body{font-family: 'Open Sans'; color:#343333; font-size: 16px;}
+a:hover{text-decoration: none;}
+img{max-width: 100%;}
+
+ /* Header */
+header{background:url(assets/images/headerbg.jpg)no-repeat; background-size: cover; padding: 40px 0 10px;}
+.top_header{display: flex; justify-content: space-between;}
+.top_header .logo a{ font-family: 'Aller'; font-weight: bold; color: #ffffff; font-size: 41px; text-transform: uppercase;}
+.top_right ul{display: flex; list-style-type: none;}
+.top_right ul li a{display: block;font-size: 15px; color: #fff;border: 1px solid #93999d; padding: 10px 25px; margin-left: 15px;}
+.top_right ul li a:hover{text-decoration: none; background: #06b09a; color: #fff; border-color:#06b09a;}
+.top_right ul li.active a{background: #06b09a; color: #fff; border-color:#06b09a;}
+.middle_header {padding-top:145px; padding-bottom: 250px;}
+.middle_header h1{ font-family: 'Raleway'; font-size: 60px; text-transform: uppercase; font-weight: 700; color: #fff; padding-bottom: 10px;}
+.middle_header h6{font-size: 20px; text-transform: uppercase; font-weight: 600; color: #fff; padding-bottom: 27px;}
+.middle_header .form-group{background-color: #6d727a; display: flex;     max-width: 92%;    padding: 12px;     margin: 0 auto;justify-content: space-around;}
+.middle_header .form-group input{font-size: 15px; color: #817f7f; font-weight:600; max-width: 270px;
+    border-radius: 0;border-color: transparent; height: 54px;}
+.middle_header .form-group .btn{border:0;width: 160px; font-size: 15px; color: #fff; font-weight:600; border-radius: 0;border-color: transparent; height: 54px;background: #06b09a; }
+#hospital_schedule .box{padding:63px 45px;}
+#hospital_schedule{margin-top: -150px;    margin-bottom: 67px;}
+#hospital_schedule .left{background:url(assets/images/left_side.png)no-repeat; background-size: 100%; }
+#hospital_schedule .right{background:url(assets/images/right_side.png)no-repeat; background-size: 100%; }
+#hospital_schedule .box p{ font-size: 16px; color: #fff; font-weight: 600; text-transform: uppercase; padding-top: 15px; max-height: 63px; height: 100%;}
+#hospital_schedule .box a{font-size: 16px;font-weight: 600; color: #fff; background: #06a792; padding: 10px 18px;}
+#feature_section{background:url(assets/images/featurebg.jpg)no-repeat; background-size: cover; padding-top:67px; }
+.feature_right h2{font-size: 56px; font-weight: 600; color: #fff}
+.feature_right p{font-size:16px; color:#fff; font-weight:400;padding-bottom: 12px;}
+.feature_right ul{list-style-type: none;    padding-bottom: 15px;}
+.feature_right ul li{background:url(assets/images/dot.png)no-repeat; color: #fff;padding-left: 30px;     background-position: 1%;}
+.list_btn a{    background: #06b09a; color: #fff; border-color: #06b09a; border-radius: 0; font-size: 15px; color: #fff; border: 1px solid #93999d; padding: 10px 25px; }
+.feature_right{ padding: 38px 10px 38px 40px;}
+#download_app{background:url(assets/images/download_app.jpg)no-repeat; background-size: cover; padding-top:45px;}
+.download_app_left{padding-top: 28px;}
+.download_app_left h2{color: #06b09a; font-family: 'Raleway'; font-weight: 700; font-size: 56px;}
+.download_app_left ul{list-style-type: none; margin-bottom: 8px;}
+.download_app_left ul li{background:url(assets/images/black_dot.png)no-repeat; color: #fff;padding-left: 30px; background-position: 1%;color: #161616; font-weight: 600;}
+.download_app_left ul li:last-child{background: none; padding: 0; padding-top: 20px;}
+.send_link .form-group {display: flex;}
+.send_link .form-group input{max-width: 205px; height: 42px; background: #06b09a; color: #fff; border-radius: 0;}
+.send_link .form-group input::placeholder{color: #fff;}
+.send_link .form-group .btn{max-width: 142px; height: 42px;  border-radius: 0;background: #07907e;}
+.smart_btn{padding-top: 15px;}
+.smart_btn img{margin-left:5px;}
+#patients_testimonial{padding: 55px 0 70px; background: #fafafa;}
+.patients_testimonial h2{font-size: 56px; color: #06b09a; font-family: 'Raleway'; font-weight: 700;}
+.patients_testimonial a{background: #27baa7; padding: 13px 50px; color: #fff; max-width: 290px; margin: 0 auto; display:block;}
+.patients_testimonial p{padding: 0 15px; padding-bottom: 7px; padding-top: 5px;}
+.partners .owl-dots{display: none;}
+.partners .owl-theme .owl-nav [class*=owl-]{margin:0;}
+.partners .owl-theme .owl-nav{padding-top: 27px;}
+.partners button span{    color: #27baa7 !important; border: 1px solid #27baa7 !important; border-radius: 0px !important;
+    font-size: 32px !important; padding: 1px 26px; display: block;}
+.partners{margin-top: 30px;}
+#specialist{padding: 55px 0;}
+#specialist h2{    color: #121212; font-size: 30px; padding-bottom: 17px;}
+#specialist .doctors_details{display: flex; justify-content: space-between; background: #27baa7;
+    color: #fff; }
+#specialist .doctors_details h3{font-size: 22px; font-weight: bold; margin:0;  padding-left: 30px; padding-top: 15px;}
+#specialist ul a{font-size: 14px; color: #27baa7;    line-height: 29px;}
+#specialist ul{list-style-type: none; padding: 15px 30px;}
+.doctor_detail{border: 1px solid #f2f2f2;max-height: 598px; height:100%;}
+.doctors_details h6{height: 59px; width: 62px;  text-align: center;  margin: 0; background: #1eab99;}
+.doctors_details h6 img{ position: relative; top: 13px;}
+#post_job{background:url(assets/images/job_bg.jpg)no-repeat; background-size: cover; padding: 85px 0;}
+.job_text h2{font-size: 56px; font-weight: bold; color: #27baa7; font-family: 'Raleway';    padding-bottom: 15px;}
+.ble_btn{background: #27baa7; padding: 13px 50px; color: #fff; max-width: 290px; display: block;}
+.job_text p, .job_text .check_btn{padding-bottom: 8px;}
+.need_help {    background: #27baa7;padding: 38px 0;}
+.need_help h2{font-size: 28px; color: #fff; font-weight: 600; margin:0;}
+.need_help h2 span{    text-decoration: underline;}
+.footer{padding:48px 0;}
+.footer h3{color: #0e2c4e; font-size: 22px; font-weight: 600; font-family: 'Raleway'; padding-bottom: 15px;}
+.footer ul li a{font-size: 14px; color: #27baa7;}
+.footer ul li{ line-height: 25px;}
+.footer ul{list-style-type: none;}
+.footer_img{padding-top:15px;}
+.copyright{background: #27baa7; padding: 30px 0;}
+.copyright .copy_section{display:flex; justify-content: space-between;}
+.copyright .copy_section ul{display: flex; list-style-type: none; margin:0;}
+.copyright .copy_section p, .copyright .copy_section ul a{color:#fff; margin:0;}
+.copyright .copy_section ul a{margin: 0 17px;}
+/*04-04-2019 Start*/
+.owl-nav button span{
+  color: #27baa7 !important;
+    border: 1px solid #27baa7 !important;
+    border-radius: 0px !important;
+    font-size: 32px !important;
+    padding: 1px 26px;
+    display: block;}
+    .owl-carousel .owl-stage {
+      margin-top: 13px;
+  }
+/*End*/
+/*08-04-2019 Start */
+.top_right ul li {
+    display: flex !important;
+}
+/*End*/
+/* MEDIA QUERY */
+@media(max-width: 1199px){
+#hospital_schedule .box a{font-size: 14px;}
+#hospital_schedule .box p{max-height: 85px;}
+.download_app_left ul li:last-child, .download_app_left{padding-top: 0}
+}
+
+@media(max-width: 991px){
+#hospital_schedule .box{padding: 30px 20px;}
+#hospital_schedule .box a{padding: 10px 15px;}
+.download_app_left h2, .feature_right h2,.middle_header h1, .patients_testimonial h2, .job_text h2{font-size:42px;}
+.smart_btn{display: flex;padding-bottom: 10px;}
+.smart_btn a:first-child{padding-right: 10px;}
+
+
+}
+@media(max-width: 767px)
+{
+.middle_header{padding-top: 100px;}
+#hospital_schedule .box{margin-bottom:15px;}
+#hospital_schedule .box p{max-height: 100%; height: auto;}
+#download_app .app{display: flex; flex-direction: column-reverse;}
+.middle_header .form-group{display: block;}
+.middle_header .form-group input{max-width: 100%;}
+.middle_header .form-group .btn{margin-top: 10px;}
+.copyright .copy_section{display: block; text-align: center;}
+.copyright .copy_section ul{justify-content: space-between;}
+.footer_img{display: inline-block;}
+.download_app_left h2, .feature_right h2, .middle_header h1, .patients_testimonial h2, .job_text h2{font-size: 36px;}
+}
+
+@media(max-width: 480px){
+.top_header{display: block;}
+.top_right ul{justify-content: center;}
+.top_right ul li a{font-size: 13px; padding: 10px 20px;}
+.logo{text-align: center;padding-bottom: 10px;}
+.middle_header{padding-top: 50px;}
+.copyright .copy_section ul a{margin: 0px 13px;}
+
+}

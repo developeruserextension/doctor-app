@@ -1,0 +1,33 @@
+<header>
+  <div class="container">
+    <nav class="top_header">
+      <div class="logo">
+        <a href="#">Logo Here</a>
+      </div>
+      <ng2-slim-loading-bar [color]="'red'" [height]="'5px'"></ng2-slim-loading-bar>
+       <div class="top_right">
+                <ul>
+                   <!-- <li><a routeLink="[routes.linkName]">{{routes.url}}</a></li> -->
+                  <li> <a [routerLink]="homeRoute" >Home</a></li>
+                  <li> <a [routerLink]="servicesRoute">Services</a></li>
+                  <li> <a [routerLink]="aboutRoute">About</a></li>
+                  <li> <a [routerLink]="login_signupRoute">LogIn & Signup</a></li>
+                </ul>
+            </div>
+      </nav>
+
+    <div class="middle_header text-center">
+      <form>
+        <h1>Feeling meh? Find a doctor.</h1>
+        <h6>Search Doctors and Book appointments online, instantly</h6>
+          <div class="form-group">
+              <input type="text" class="form-control" id="doctor_name" placeholder="Condition, procedure, docter name..">
+              <input type="text" class="form-control" id="zipcode" placeholder="Zip code or city">
+              <input type="text" class="form-control" id="insurance_number" placeholder="Insurance carrier and plan">
+             <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+
+      </form>
+    </div>
+  </div>
+</header>
