@@ -1,272 +1,27 @@
 @import '../node_modules/ng2-slim-loading-bar/style.css';
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 *{margin:0; padding: 0;}
 
  /* font Face */
- @font-face {
-    font-family: 'Aller';
-    src: url('assets/fonts/Aller-Regular.woff2') format('woff2'),
-        url('assets/fonts/Aller-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Aller';
-    src: url('assets/fonts/Aller-Bold.woff2') format('woff2'),
-        url('assets/fonts/Aller-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Aller';
-    src: url('assets/fonts/Aller-Light.woff2') format('woff2'),
-        url('assets/fonts/Aller-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-Bold.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-LightItalic.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-SemiBoldItalic.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-Light.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-Regular.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-ExtraBoldItalic.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('assets/fonts/OpenSans-Italic.woff2') format('woff2'),
-        url('assets/fonts/OpenSans-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-ExtraBoldItalic.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Bold.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-ExtraBold.woff2') format('woff2'),
-        url('assets/fonts/Raleway-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-LightItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Light.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-SemiBold.woff2') format('woff2'),
-        url('assets/fonts/Raleway-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-ExtraLightItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-ExtraLightItalic.woff') format('woff');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-ExtraLight.woff2') format('woff2'),
-        url('assets/fonts/Raleway-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Black.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-BoldItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-ThinItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Medium.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Italic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-MediumItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Regular.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-Thin.woff2') format('woff2'),
-        url('assets/fonts/Raleway-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('assets/fonts/Raleway-BlackItalic.woff2') format('woff2'),
-        url('assets/fonts/Raleway-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
  body{font-family: 'Open Sans'; color:#343333; font-size: 16px;}
-a:hover{text-decoration: none;}
-img{max-width: 100%;}
+ a:hover{text-decoration: none;}
+ img{max-width: 100%;}
 
  /* Header */
 header{background:url(assets/images/headerbg.jpg)no-repeat; background-size: cover; padding: 40px 0 10px;}
 .top_header{display: flex; justify-content: space-between;}
 .top_header .logo a{ font-family: 'Aller'; font-weight: bold; color: #ffffff; font-size: 41px; text-transform: uppercase;}
 .top_right ul{display: flex; list-style-type: none;}
-.top_right ul li a{display: block;font-size: 15px; color: #fff;border: 1px solid #93999d; padding: 10px 25px; margin-left: 15px;}
-.top_right ul li a:hover{text-decoration: none; background: #06b09a; color: #fff; border-color:#06b09a;}
+.top_right ul li a{display: block;font-size: 15px; color: #fff !important;border: 1px solid #93999d; padding: 10px 25px; margin-left: 15px;}
+.top_right ul li a:hover{text-decoration: none; background: #06b09a; color: #fff !important; border-color:#06b09a; cursor: pointer;}
 .top_right ul li.active a{background: #06b09a; color: #fff; border-color:#06b09a;}
 .middle_header {padding-top:145px; padding-bottom: 250px;}
 .middle_header h1{ font-family: 'Raleway'; font-size: 60px; text-transform: uppercase; font-weight: 700; color: #fff; padding-bottom: 10px;}
 .middle_header h6{font-size: 20px; text-transform: uppercase; font-weight: 600; color: #fff; padding-bottom: 27px;}
 .middle_header .form-group{background-color: #6d727a; display: flex;     max-width: 92%;    padding: 12px;     margin: 0 auto;justify-content: space-around;}
-.middle_header .form-group input{font-size: 15px; color: #817f7f; font-weight:600; max-width: 270px;
+.middle_header .form-group input{font-size: 15px; color: #817f7f; font-weight:600; max-width: 230px;
     border-radius: 0;border-color: transparent; height: 54px;}
 .middle_header .form-group .btn{border:0;width: 160px; font-size: 15px; color: #fff; font-weight:600; border-radius: 0;border-color: transparent; height: 54px;background: #06b09a; }
 #hospital_schedule .box{padding:63px 45px;}
@@ -335,20 +90,301 @@ header{background:url(assets/images/headerbg.jpg)no-repeat; background-size: cov
 /*04-04-2019 Start*/
 .owl-nav button span{
   color: #27baa7 !important;
-    border: 1px solid #27baa7 !important;
-    border-radius: 0px !important;
-    font-size: 32px !important;
-    padding: 1px 26px;
-    display: block;}
+  border: 1px solid #27baa7 !important;
+  border-radius: 0px !important;
+  font-size: 32px !important;
+  padding: 1px 26px;
+  display: block;}
     .owl-carousel .owl-stage {
       margin-top: 13px;
   }
+
 /*End*/
 /*08-04-2019 Start */
 .top_right ul li {
     display: flex !important;
 }
 /*End*/
+/* 29 - 4 - 2019 */
+.format__calender {margin-left: -65px;font-size: 28px !important;margin-top: 15px; }
+.mat-form-field-infix input {background: #fff;}
+.dropdown-menu.show{background:transparent;border:0px;}
+.dropdown-menu.show ul li:first-child a{margin-left:0;}
+.mat-form-field-infix {border: 0;padding: 0 !important;}
+.doctor_mat .mat-form-field-infix{width: 320px;}
+.doctor_mat .mat-form-field-infix .first_input{max-width:100%;padding: 5px;text-align:center;}
+.mat_icon_search{margin-top: -36px;z-index: 100000;float: right;font-size: 28px;}
+.modal h3{text-align: center; font-size: 40px; font-weight: 600; text-transform: uppercase;}
+ button.close {margin-right: -56px;font-size: 46px;margin-top: -43px;}
+ /*30-04-2019* end*/
+ button.btn.btn-primary.button__form{width: 100%;background: #06b09a;font-size: 18px;}
+ .loginSignUpSeparator { border-top: 1px solid #cbd2d6;position: relative;margin: 25px 0 10px;text-align: center;}
+.loginSignUpSeparator .textInSeparator {background-color: #fff;padding: 0 .5em;position: relative;color: #6c7378;top: -.7em;}
+/*01-05-2019 Start joinzocDoc*/
+.container-fluid.new-join-header {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.new-join-header .header-col {
+  padding: 10px 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-join .new-join-carousel {
+  position: relative;
+}
+.new-join .new-join-carousel {
+  position: relative;
+}
+.container-fluid.new-join-header .cta-container {
+  margin: 20px 0;
+}
+.text-col .slide-headline {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  font-family: 'sharp-sans-bold', Arial, sans-serif;
+  color: #06b09a;
+}
+.cta-container.list__zocdoc {
+  text-align: center;
+  width: 100%;
+}
+.col.order-md-last .image__slide {
+  width: 250px;
+  margin: auto;
+  margin-right: 284px;
+}
+.image__slide {
+  width: 250px;
+  margin: auto;
+  display: block;
+}
+img.img-fluid.image_contain {
+  display: block;
+  margin: 0 auto 18px;
+  height: 80px;
+  width: 80px;
+  background: #06b09a;
+}
+.content_title_heading p.slide-body {
+  color: #06b09a;
+}
+.values-row.row.max-width {
+  margin: 50px auto;
+}
+.cta-container {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+button.owl-dot {
+  margin-bottom: 30px;
+}
+.new__join h2 {
+  margin-top: 18px;
+}
+a.cta {
+  background-color: #06b09a;
+  border: solid 1px transparent;
+  border-radius: 0px;
+  padding: 16px 30px;
+  font-size: 16px;
+  color: #fff !important;
+  font-family: "sharp-sans-medium", Arial, sans-serif;
+  cursor: pointer;
+}
+.wFormContainer {
+  margin: 0px auto;
+}
+.inputWrapper {
+  box-sizing: border-box;
+    max-width: 100%;
+  vertical-align: top;
+    position: relative;
+  }
+  .oneField.field-container-D {
+  max-width: 100%;
+  margin: 14px;
+  }
+  .new__join h2 {
+      font-size: 34px;
+      line-height: 44px;
+      padding-bottom: 20px;
+      font-family: 'sharp-sans-bold', Arial, sans-serif;
+  }
+  input.exclude-from-playback.required {
+    width: 306px;
+    height: 44px;
+    padding: 0 10px;
+    color: #00234B;
+    background-color: #dce7f2;
+    border: transparent;
+    border-radius: 3px;
+    margin: 14px auto 20px;
+}
+.primaryAction.zocdoc__form_submit {
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+  background-color: #06b09a;
+  padding: 17px 76px;
+  opacity: 1;
+  color: #ffffff;
+  border: none;
+  display: block;
+  margin: 44px auto 24px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0px;
+  font-family: "sharp-sans-semibold", Arial, sans-serif;
+}
+label.label.preField.reqMark {
+  font-size: 18px;
+  font-family: "sharp-sans-semibold", Arial, sans-serif;
+}
+/*start zocdoc join 02-05-2019*/
+.text-col.col-sm.order-sm-last.zocdoc_content h1 {
+  font-size: 40px;
+    line-height: 56px;
+    font-family: 'sharp-sans-bold', Arial, sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+    margin-top: 170px;
+    color: #06b09a;
+}
+.text-col.col-sm.order-sm-last.zocdoc_content h2 {
+  font-size: 20px;
+  line-height: 29px;
+  padding-bottom: 20px;
+  font-family: 'sharp-sans-medium', Arial, sans-serif;
+  float: left;
+}
+.col-sm.text-center .zocdoc__heading {
+  font-family: 'sharp-sans-bold', Arial, sans-serif;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-top: 39px;
+  color: #06b09a;
+}
+img.img-fluid.green-blob {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  width: 500px;
+  z-index: -999;
+}
+.col.order-md-last.content__image {
+  width: 50%;
+  float: right;
+}
+.col.text-col.order-md-first.content_title_heading {
+  width: 50%;
+  float: left;
+  padding-top: 150px;
+  padding-left: 170px;
+}
+.owl-dot.active span {
+  background: #06b09a !important;
+}
+.new-join-carousel .owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.new-join-carousel  .owl-nav .owl-prev {
+    float: left;
+    position: relative;
+    left: 25px;
+    bottom: 79px;
+}
+.new-join-carousel  .owl-nav .owl-next {
+  float: right;
+position: relative;
+bottom: 79px;
+}
+input#insurance_number {
+  pointer-events: none;
+}
+.forgotLink {
+  text-align: center;
+}
+.conatiner.new-join-card {
+  display: flex;
+  margin-top: 30px;
+}
+.card.new-card {
+  border-radius: 10px;
+    border: 2px solid #bbb;
+    margin: 10px 10px 30px 10px;
+    padding: 10px;
+    overflow: hidden;
+    width: 30%;
+    height: 300px;
+    box-shadow: 0 4px 4px 0 #DADADA;
+    max-width: 300px;
+}
+.col-sm.text-center.new_join__text {
+  margin-top: 40px;
+  color: #06b09a;
+}
+section.zocdoc_join_form {
+  margin-top: 55px !important;
+}
+.new__join {
+  margin-top: 40px;
+  color: #06b09a;
+}
+.description img {
+  margin: auto;
+  width: 90px;
+  display: block;
+}
+p.doctor_name strong {
+  font-size: 18px;
+  line-height: 48px;
+  margin-top: 17px;
+  margin-bottom: 14px;
+  font-family: "sharp-sans-bold", Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+  color: #06b09a;
+}
+p.provider-bio.text-center {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 13px;
+  font-family: "sharp-sans-semibold", Arial, sans-serif;
+}
+p.card_decription_card {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+select.exclude-from-playback.required {
+  width: 306px;
+  height: 44px;
+  padding: 0 10px;
+  color: #00234B;
+  background-color: #dce7f2;
+  border: transparent;
+  border-radius: 3px;
+  margin: 14px auto 20px;
+}
+sup.design_star {
+  color: red;
+  font-weight: 1000;
+  font-size: 14px;
+}
+
+/*02-05-2019 End joinzocDoc*/
 /* MEDIA QUERY */
 @media(max-width: 1199px){
 #hospital_schedule .box a{font-size: 14px;}
@@ -389,3 +425,4 @@ header{background:url(assets/images/headerbg.jpg)no-repeat; background-size: cov
 .copyright .copy_section ul a{margin: 0px 13px;}
 
 }
+

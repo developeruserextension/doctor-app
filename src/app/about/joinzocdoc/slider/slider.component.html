@@ -1,0 +1,11 @@
+<owl-carousel  [options]="myCarouselOptions" [items]="joinzocdoc" [carouselClasses]="['owl-theme', 'sliding','row']" >
+  <div class="item" *ngFor="let image of joinzocdoc ; let i = index">
+   <div class="col order-md-last content__image">
+     <img class="image__slide" src={{image.image}}/>
+   </div>
+   <div class="col text-col order-md-first content_title_heading">
+      <p class="slide-headline">{{image.title}}</p>
+      <p class="slide-body">{{image.content}}</p>
+  </div>
+  </div>
+ </owl-carousel>

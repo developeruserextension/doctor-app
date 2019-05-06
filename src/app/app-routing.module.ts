@@ -5,13 +5,16 @@ import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { JoinzocdocComponent } from './about/joinzocdoc/joinzocdoc.component';
+
 
 const routes: Route[]= [
-  {path:'' , redirectTo:'/home',pathMatch:'full'},
+  { path: '' , redirectTo: '/home',pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'login&signup', component: LoginSignupComponent },
+  { path: 'about',component: AboutComponent,},
+  { path: 'about/join',component: JoinzocdocComponent},
+  { path: 'login&signup',component: LoginSignupComponent},
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -20,5 +23,5 @@ const routes: Route[]= [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
- 
+
  }

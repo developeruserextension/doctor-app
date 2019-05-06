@@ -1,0 +1,35 @@
+<div class="jumbotron" >
+  <div class="row">
+      <div class="col-md-12">
+          <span class="heading"><h3>ZocDoc</h3></span>
+            <div class="form-group">
+              <label class="control_label">Email</label>
+              <input type="text"  placeholder="Enter Your Email Address" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label class="control_label">Password</label>
+              <input type="password"placeholder="Enter Your PassWord" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary button__form button_login">Login</button>
+            </div>
+          <div class="forgotLink"><a href="#" class="" pa-marked="1">Having trouble logging in?</a></div>
+          <div class="loginSignUpSeparator"><span class="textInSeparator">or</span></div>
+          <div class="registration_from form-group">
+              <button class="btn btn-primary button__form button_signup" (click)="show(contentes)">Register</button>
+          </div>
+      </div>
+  </div>
+</div>
+<ng-template #contentes let-c="close">
+  <div class="container">
+  <div class="modal_popup">
+    <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+        <span class="cross" aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     <app-registration-form></app-registration-form>
+    </div>
+  </div>
+  </ng-template>

@@ -1,0 +1,19 @@
+<section class="container-fluid new-join-value-props love-zocdoc" style="background-color: #f4f4f4">
+  <div class="hero-row row max-width">
+      <div class="col-sm text-center new_join__text">
+          <h2>Why providers love Zocdoc</h2>
+      </div>
+   </div>
+         <div class="values-row row max-width">
+            <div class="col-12 col-lg-3 col-sm-6 value" *ngFor="let images of provider let i=index">
+            <a href={{images.image}} class="img_fluid_container"><img class="img-fluid image_contain" src={{images.image}}></a>
+              <p class="text-center"><strong>{{images.title}}</strong></p>
+              <p class="text text-center">{{images.content}}</p>
+             </div>
+            </div>
+         <div class="row max-width">
+           <div class="cta-container list__zocdoc">
+            <a [scrollTo]="'#target'" [scrollDuration]="1000" class="cta">List your practice on Zocdoc</a>
+           </div>
+  </div>
+</section>

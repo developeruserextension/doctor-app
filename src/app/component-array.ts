@@ -12,6 +12,14 @@ import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { JoinzocdocComponent } from './about/joinzocdoc/joinzocdoc.component';
+import { JoinSliderComponent } from './about/joinzocdoc/slider/slider.component';
+import { JoinPatientsComponent } from './about/joinzocdoc/join-patients/join-patients.component';
+import { ZocdocProviderComponent } from './about/joinzocdoc/zocdoc-provider/zocdoc-provider.component';
+import { JoinFormComponent } from './about/joinzocdoc/join-form/join-form.component';
+import { LoveZocdocComponent } from './about/joinzocdoc/love-zocdoc/love-zocdoc.component';
 
 
 export const modulerouting= [
@@ -27,5 +35,13 @@ export const modulerouting= [
   ServicesComponent,
   AboutComponent,
   LoginSignupComponent,
-  PageNotFoundComponent
+  PageNotFoundComponent,
+  LoginFormComponent,
+  RegistrationFormComponent,
+  JoinSliderComponent,
+  JoinzocdocComponent,
+  ZocdocProviderComponent,
+  LoveZocdocComponent,
+  JoinFormComponent,
+  JoinPatientsComponent
 ]

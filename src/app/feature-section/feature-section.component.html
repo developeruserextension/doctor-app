@@ -13,10 +13,11 @@
           <li>Deliver a premium experience patients love</li>
         </ul>
         <div class="list_btn">
-          <a href="#" class="btn">List your practice on Zocdoc</a>
-        </div>  
+        <a class="btn" [routerLink]="['/about/join/']">List your practice on Zocdoc</a> 
+       <router-outlet></router-outlet>
+        </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -33,12 +34,12 @@
           <li>Send me a link to the app</li>
         </ul>
         <div class="send_link">
-          <form>
+
             <div class="form-group">
               <input type="text" class="form-control" id="send_link" placeholder=" +91 123-456-789">
              <button type="submit" class="btn btn-primary">Send Link</button>
             </div>
-          </form>
+
         </div>
         <div class="smart_btn">
           <a href="#"><img src="assets/images/android_btn.png" alt=""></a>
