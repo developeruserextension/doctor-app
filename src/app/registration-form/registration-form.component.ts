@@ -1,6 +1,8 @@
+import { FormService } from '../form.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MustMatch } from '../_helpers/must-match.validators';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -11,29 +13,42 @@ import { MustMatch } from '../_helpers/must-match.validators';
 export class RegistrationFormComponent implements OnInit {
   registerForm:FormGroup;
   submitted=false;
+  message="";
+  show: boolean = false
+  constructor(private formBuilder:FormBuilder,private fs:FormService,config: NgbModalConfig, private modalService: NgbModal) {
+    config.backdrop = 'static';
+    config.keyboard = false;
+    this.createForm();
 
-  constructor(public formBuilder:FormBuilder) { }
-
-  ngOnInit() {
+   }
+   createForm() {
     this.registerForm = this.formBuilder.group({
-      firstName:new FormControl('',Validators.required),
-      lastName:new FormControl('',Validators.required),
-      email:new FormControl('',[Validators.required,Validators.email]),
-      password:['',[Validators.required,Validators.minLength(6)]],
-      confirmPassword:['',[Validators.required,Validators.minLength(6)]],
-    },{
-      validators:MustMatch('password','confirmPassword'),
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, [Validators.required, Validators.minLength(6)]],
+      confirmPassword: [null, Validators.required]
+    }, {
+      validator: MustMatch('password','confirmPassword')
     });
   }
-  get f(){
-    return this.registerForm.controls;
-}
-onSubmit(){
-  this.submitted = true;
+
+  get f(){return this.registerForm.controls;}
+  
+addForm(firstName,lastName,email,password,confirmPassword){
+  this.submitted=true;
   if (this.registerForm.invalid) {
     return;
+  }
+  if(this.submitted){
+    this.fs.addForm(firstName,lastName,email,password,confirmPassword);
+    this.message="You are Successfully registered";
+    this.show=true;
+    // this.router.navigate(['about'])
+  }
 }
-alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+open(content) {
+  this.modalService.open(content);
 }
-
+ngOnInit() {}
 }

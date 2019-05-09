@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { JoinzocdocComponent } from './about/joinzocdoc/joinzocdoc.component';
+import { CareerListComponent } from './about/career-list/career-list.component';
 
 
 const routes: Route[]= [
@@ -14,6 +15,7 @@ const routes: Route[]= [
   { path: 'services', component: ServicesComponent },
   { path: 'about',component: AboutComponent,},
   { path: 'about/join',component: JoinzocdocComponent},
+  { path: 'about/career-list',component:CareerListComponent },
   { path: 'login&signup',component: LoginSignupComponent},
   { path: '**', component: PageNotFoundComponent },
 ];

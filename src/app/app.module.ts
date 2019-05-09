@@ -9,12 +9,14 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { HttpClientModule} from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { modulerouting } from './component-array';
 import {MaterialModule} from './material.module';
 import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/provider-zocdoc.component';
+import { CareerListComponent } from './about/career-list/career-list.component';
 
 
 
@@ -25,7 +27,8 @@ import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/prov
   declarations: [
     modulerouting,
     AppComponent,
-    ProviderZocdocComponent
+    ProviderZocdocComponent,
+    CareerListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/prov
     OwlModule,
     GooglePlaceModule,
     MaterialModule,
+    HttpClientModule,
     ModalModule.forRoot(),
     SlimLoadingBarModule.forRoot(),
     ScrollToModule.forRoot()
