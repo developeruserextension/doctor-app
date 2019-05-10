@@ -404,8 +404,31 @@ img.header_logo.new__logo {position: relative;left: 14%;}
   .list_header .btn-view{outline: 0; background-image: none; text-shadow: none; color: #27baa7; background-color: #fef25c;
   cursor: pointer; padding: 15px 30px; font-size: 20px; -webkit-transition: .2s all ease-out; transition: .2s all ease-out; display: inherit; margin-left: -10px; margin-top: 20px; font-size: 20px;
   line-height: 2.4rem; font-family: sharp-sans-bold; width: 170px;}
-
-
+	.mission_heading{    font-size: 36px;
+  line-height: 1.25;
+  color: #27baa7;
+  text-align: left;    padding-bottom: 27px;}
+  #mission_content{padding: 50px 0;}
+.inner_heading{    font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 9px;
+  color: #27baa7;}
+#mission_content p{font-size: 16px;
+  line-height: 1.4;
+  font-family: 'sharp-sans-medium',Arial,sans-serif;
+      color: #000;}
+  .perk ul{list-style-type: none; columns: 2;}
+  .perk ul li{margin-bottom: 15px;}
+  .job_open a{    font-family: 'sharp-sans-medium',Arial,sans-serif;
+    color: #27baa7;
+    display: block; font-size:18px; margin-bottom:10px;}
+    .job_open{margin-bottom:30px;}
+    .container a:hover.btn-view {
+      background: #27baa7;
+      color: #fff;
+      text-decoration: none;
+  }
+	
 
 
 
@@ -460,27 +483,3 @@ img.header_logo.new__logo {position: relative;left: 14%;}
 }
 
 
-.mission_heading{    font-size: 36px;
-  line-height: 1.25;
-  color: #27baa7;
-  text-align: left;    padding-bottom: 27px;}
-  #mission_content{padding: 50px 0;}
-.inner_heading{    font-size: 24px;
-  line-height: 28px;
-  padding-bottom: 9px;
-  color: #27baa7;}
-#mission_content p{font-size: 16px;
-  line-height: 1.4;
-  font-family: 'sharp-sans-medium',Arial,sans-serif;
-      color: #000;}
-  .perk ul{list-style-type: none; columns: 2;}
-  .perk ul li{margin-bottom: 15px;}
-  .job_open a{    font-family: 'sharp-sans-medium',Arial,sans-serif;
-    color: #27baa7;
-    display: block; font-size:18px; margin-bottom:10px;}
-    .job_open{margin-bottom:30px;}
-    .container a:hover.btn-view {
-      background: #27baa7;
-      color: #fff;
-      text-decoration: none;
-  }

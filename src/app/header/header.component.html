@@ -3,14 +3,14 @@
   <div class="container">
     <nav class="top_header">
       <div class="logo">
-        <a routerLink="/home"><img class="header_logo" src="assets/images/doc_app_logo.png" alt="ZocDoc Logo"></a>
+        <a routerLink="/home"><img class="header_logo" src="assets/images/doc_app_logo_new.png" alt="ZocDoc Logo"></a>
       </div>
        <div class="top_right">
-          <ul>
+          <ul class="navbar-nav mr-auto">
                    <!-- <li><a routeLink="[routes.linkName]">{{routes.url}}</a></li> -->
-                  <li> <a routerLink="/home">Home</a></li>
-                  <li> <a routerLink="/services">Service</a></li>
-                  <li> <a routerLink="/about">About</a></li>
+                  <li class="nav-item active"> <a routerLink="/home" class="nav-link">Home</a></li>
+                  <li class="nav-item active"> <a routerLink="/services" class="nav-link">Service</a></li>
+                  <li class="nav-item active"> <a routerLink="/about" class="nav-link">About</a></li>
               <div ngbDropdown class="d-inline-block show__menu">
                   <li> <a id="dropdownBasics" ngbDropdownToggle routerLink="">Login/SignUp</a></li>
                  <div ngbDropdownMenu aria-labelledby="dropdownBasics">
@@ -41,7 +41,7 @@
              <input type="text" class="form-control" id="zipcode" placeholder="Zip code or city" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)">
              <span class="Calender"><i class="fa fa-map-marker format__calender"></i></span>
 
-              <input type="text" class="form-control" id="insurance_number" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Choose your Date">
+              <input type="text" class="form-control" id="insurance_number" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"  placeholder="Choose your Date">
               <span [owlDateTimeTrigger]="dt2" class="Calender"><i class="fa fa-calendar format__calender"></i></span>
               <owl-date-time  [pickerType]="'calendar'" #dt2></owl-date-time>
              <button type="submit" class="btn btn-primary">Search</button>
