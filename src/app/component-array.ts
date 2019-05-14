@@ -10,7 +10,6 @@ import { SliderComponent } from './slider/slider.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
-import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
@@ -38,7 +37,6 @@ export const modulerouting= [
   HomeComponent,
   ServicesComponent,
   AboutComponent,
-  LoginSignupComponent,
   PageNotFoundComponent,
   LoginFormComponent,
   RegistrationFormComponent,

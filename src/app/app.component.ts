@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   
 
   ngOnInit() {
-    this.meta.addTag({name:'author', content : 'ZocDoc'});
+    this.meta.addTag({name:'author', content : 'DocApp'});
     this.meta.addTag({name:'robots', content : 'index,follow'});
   }
 

@@ -6,7 +6,7 @@ import {Title,Meta} from '@angular/platform-browser';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-title='Service | Zocdoc'
+title='Service | DocApp'
   constructor(private titleService:Title,private meta:Meta ) { }
 
   ngOnInit() {
