@@ -6,8 +6,6 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 
-
-
 export class Doctor {
   constructor(public name: string) {
   }

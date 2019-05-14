@@ -119,7 +119,7 @@ img.header_logo {width: 50%;}
  button.btn.btn-primary.button__form{width: 100%;background: #06b09a;font-size: 18px;}
  .loginSignUpSeparator { border-top: 1px solid #cbd2d6;position: relative;margin: 25px 0 10px;text-align: center;}
 .loginSignUpSeparator .textInSeparator {background-color: #fff;padding: 0 .5em;position: relative;color: #6c7378;top: -.7em;}
-/*01-05-2019 Start joinzocDoc*/
+/*01-05-2019 Start joinDocApp*/
 .container-fluid.new-join-header {
     width: 100%;
     padding-right: 15px;
@@ -247,7 +247,7 @@ label.label.preField.reqMark {
   font-size: 18px;
   font-family: "sharp-sans-semibold", Arial, sans-serif;
 }
-/*start zocdoc join 02-05-2019*/
+/*start Docapp join 02-05-2019*/
 .text-col.col-sm.order-sm-last.zocdoc_content h1 {
   font-size: 40px;
     line-height: 56px;
@@ -389,7 +389,7 @@ a.login__button {
   background: #06b09a;
   cursor: pointer;
 }
-/*02-05-2019 End joinzocDoc*/
+/*02-05-2019 End joinDocApp*/
 
 /*09May2019 start career Page*/
 img.header_logo.new__logo {position: relative;left: 14%;}
@@ -424,19 +424,16 @@ img.header_logo.new__logo {position: relative;left: 14%;}
       color: #fff;
       text-decoration: none;
   }
-	
-
-
-
-
-
-
-
-
-
-
-
 /*end*/
+/*14 - 5 - 2019 */
+#services{padding:40px 0;}
+#services h5{margin-bottom:50px;}
+.inner_tabs{    max-width: 75%;width: 100%;margin: 0 auto !important;}
+.inner_tabs .feature-box{height:200px; margin-bottom:20px;}
+.inner_tabs .feature-box .fe_box{background:#ddd; height: 100%; padding:20px;}
+.inner_tabs .feature-box .fe_box h6{font-size:20px;}
+.inner_tabs .feature-box .fe_box img{margin-bottom:20px;}
+  /*End*/
 /* MEDIA QUERY */
 @media(max-width: 1199px){
 #hospital_schedule .box a{font-size: 14px;}

@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { modulerouting } from './component-array';
 import {MaterialModule} from './material.module';
+import { FaqPatientsComponent } from './services/faq-patients/faq-patients.component';
 
 
 
@@ -26,7 +27,8 @@ import {MaterialModule} from './material.module';
 @NgModule({
   declarations: [
     modulerouting,
-    AppComponent
+    AppComponent,
+    FaqPatientsComponent
   ],
   imports: [
     BrowserModule,

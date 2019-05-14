@@ -9,11 +9,11 @@ export class JoinSliderComponent implements OnInit {
 
   constructor() { }
 
-  joinzocdoc=[
+  joindocapp=[
     { image: 'assets/images/join_images/first.png',
       title: 'Look for a new provider',
   // tslint:disable-next-line: max-line-length
-      content: 'Millions of patients use the Zocdoc website and app every month to look for a new provider by selecting their insurance plan, visit reason and location.'
+      content: 'Millions of patients use the DocApp website and app every month to look for a new provider by selecting their insurance plan, visit reason and location.'
     },
     {
       image: 'assets/images/join_images/Search-with-device-fixed.svg',

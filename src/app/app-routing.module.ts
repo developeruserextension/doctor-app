@@ -11,7 +11,7 @@ import { CareerListComponent } from './about/career-list/career-list.component';
 const routes: Route[]= [
   { path: '' , redirectTo: '/home',pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'services', component: ServicesComponent },
+  { path: 'patient/s', component: ServicesComponent },
   { path: 'about',component: AboutComponent,},
   { path: 'about/join',component: JoinzocdocComponent},
   { path: 'about/career-list',component:CareerListComponent },
