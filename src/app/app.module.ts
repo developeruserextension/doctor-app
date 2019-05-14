@@ -11,12 +11,12 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { HttpClientModule} from "@angular/common/http";
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { modulerouting } from './component-array';
 import {MaterialModule} from './material.module';
-import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/provider-zocdoc.component';
-import { CareerListComponent } from './about/career-list/career-list.component';
+
 
 
 
@@ -26,9 +26,7 @@ import { CareerListComponent } from './about/career-list/career-list.component';
 @NgModule({
   declarations: [
     modulerouting,
-    AppComponent,
-    ProviderZocdocComponent,
-    CareerListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +43,7 @@ import { CareerListComponent } from './about/career-list/career-list.component';
     HttpClientModule,
     ModalModule.forRoot(),
     SlimLoadingBarModule.forRoot(),
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

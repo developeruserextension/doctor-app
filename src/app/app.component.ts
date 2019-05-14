@@ -9,28 +9,10 @@ import {Meta} from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private slimLoadingBarService: SlimLoadingBarService,private _router:Router,private meta:Meta) {
-     this._router.events.subscribe((event: Event) => {
-      this.navigationInterceptor(event);
-    });
+  constructor(private meta:Meta) {
+   
   }
-   navigationInterceptor(event:Event) {
-    if (event instanceof NavigationStart) {
-      this.slimLoadingBarService.start(() => {
-        console.log('Loading complete');
-      });
-    }
-    if (event instanceof NavigationEnd) {
-      this.slimLoadingBarService.complete();
-    }
-    if (event instanceof NavigationCancel) {
-      this.slimLoadingBarService.complete();
-    }
-    if (event instanceof NavigationError) {
-      this.slimLoadingBarService.complete();
-    }
-  }
-
+  
 
   ngOnInit() {
     this.meta.addTag({name:'author', content : 'ZocDoc'});

@@ -20,6 +20,10 @@ import { JoinPatientsComponent } from './about/joinzocdoc/join-patients/join-pat
 import { ZocdocProviderComponent } from './about/joinzocdoc/zocdoc-provider/zocdoc-provider.component';
 import { JoinFormComponent } from './about/joinzocdoc/join-form/join-form.component';
 import { LoveZocdocComponent } from './about/joinzocdoc/love-zocdoc/love-zocdoc.component';
+import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/provider-zocdoc.component';
+import { CareerListComponent } from './about/career-list/career-list.component';
+import { CareerImageComponent } from './about/career-list/career-image/career-image.component';
+import { CareerMissionComponent } from './about/career-list/career-mission/career-mission.component';
 
 
 export const modulerouting= [
@@ -43,5 +47,9 @@ export const modulerouting= [
   ZocdocProviderComponent,
   LoveZocdocComponent,
   JoinFormComponent,
-  JoinPatientsComponent
+  JoinPatientsComponent,
+  ProviderZocdocComponent,
+  CareerListComponent,
+  CareerImageComponent,
+  CareerMissionComponent
 ]

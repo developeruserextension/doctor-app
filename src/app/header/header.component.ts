@@ -4,10 +4,13 @@ import { GooglePlaceDirective } from 'ngx-google-places-autocomplete';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
+import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError,Event } from '@angular/router';
 
 
 export class Doctor {
-  constructor(public name: string) {}
+  constructor(public name: string) {
+  }
 }
 
 @Component({
@@ -20,15 +23,36 @@ export class Doctor {
 
 export class HeaderComponent implements OnInit {
 modalReference: any;
+length:number;
+doctorCtrl:FormControl;
+filteredDoctor: Observable<any[]>;
 // tslint:disable-next-line: max-line-length
-  constructor(config: NgbModalConfig, private modalService: NgbModal){
+  constructor(config: NgbModalConfig, private modalService: NgbModal,private slimLoadingBarService: SlimLoadingBarService,private _router:Router,){
     config.backdrop = 'static';
     config.keyboard = false;
+    this._router.events.subscribe((event: Event) => {
+      this.navigationInterceptor(event);
+    });
+  }
+  navigationInterceptor(event:Event) {
+    if (event instanceof NavigationStart) {
+      this.slimLoadingBarService.start();
+      console.log("Loading Start");
+    }
+    if (event instanceof NavigationEnd) {
+      this.slimLoadingBarService.complete();
+      console.log("Loading End");
+    }
+    if (event instanceof NavigationCancel) {
+      this.slimLoadingBarService.complete();
+    }
+    if (event instanceof NavigationError) {
+      this.slimLoadingBarService.complete();
+    }
   }
 
-  length:number;
-  doctorCtrl:FormControl;
-  filteredDoctor: Observable<any[]>;
+
+ 
 
   // routes=[
   //   {linkName:'Home',url:'home'},
