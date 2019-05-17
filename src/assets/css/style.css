@@ -425,7 +425,7 @@ img.header_logo.new__logo {position: relative;left: 14%;}
       text-decoration: none;
   }
 /*end*/
-/*14 - 5 - 2019 faq */
+/*14 - 5 - 2019 start faq */
 #services{padding:40px 0;}
 #services h5{margin-bottom:50px;}
 .inner_tabs{    max-width: 75%;width: 100%;margin: 0 auto !important;}
@@ -440,7 +440,7 @@ img.header_logo.new__logo {position: relative;left: 14%;}
 .service_header .navbar ul li a{color:#fff; margin: 0 15px;}
 .service_header .navbar{    background: rgba(6, 176, 154, 1); }
 .service_header form button{width: 128px; height: 50px; border-radius: 0; background: #06b09a;border: #06b09a;}
-.service_header{    padding: 30px 0 0;     background-image: none;}
+.service_header{    padding: 30px 0 0;     background-image: url(../../assets/images/faq_images/header___image.jpg);}
 .show_dropdown.dropdown {cursor: pointer;}
  a.faq_dropdown {color: #fff !important;font-weight: 1000;}
  h6.text-center {color: rgba(6, 176, 154, 1);font-weight: 1000;}
@@ -455,8 +455,16 @@ img.header_logo.new__logo {position: relative;left: 14%;}
 	background:#efefef;
 }
 a.login__here {cursor: pointer;color: #06b09a !important;position: relative;left: 51%;bottom: 40px;font-weight: 1000;}
-  
+
   /*Modal css registration End*/
+
+  /*About Start 17-05-2019*/
+  .end-banner{background-color: #f2b3c7; padding: 50px 0;}
+.end-banner i{display: block;    font-size: 60px;
+  margin: 40px;}
+.end-banner a{ border: 0;width: 160px;font-size: 15px;color: #fff;font-weight: 600;border-radius: 0;border-color: transparent;height: 54px;background: #06b09a;
+  display: inline-block; line-height: 54px;}
+  /*17-05-2019 End*/
 /* MEDIA QUERY */
 @media(max-width: 1199px){
 #hospital_schedule .box a{font-size: 14px;}

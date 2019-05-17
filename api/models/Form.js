@@ -19,6 +19,6 @@ let Form=new Schema({
         type:String
     }
     },{
-        collection:'form'
+        collection:'docapp_register'
 });
 module.exports=mongoose.model('Form',Form);

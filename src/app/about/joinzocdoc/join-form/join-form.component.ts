@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-join-form',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinFormComponent implements OnInit {
   constructor() { }
-
+  joinForm:FormGroup;
+  submitted=false;
   speciality=[
     {name:'Acupuncturist',value:'Acupuncturist'},
     {name:'Allergist',value:'Allergist'},
@@ -85,6 +87,18 @@ export class JoinFormComponent implements OnInit {
 
   public scroll(element: any) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+
+  //joimForm Submitting
+  addjoinForm(firstName,lastName,speciality,mobile,zipcode,email){
+    this.submitted=true;
+    if (this.joinForm.invalid) {
+      return;
+    }
+    if(this.submitted){
+      alert(firstName+""+lastName+""+speciality+""+mobile+""+zipcode+""+email);
+    }
   }
 
   ngOnInit() {

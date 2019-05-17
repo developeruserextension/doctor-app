@@ -1,4 +1,3 @@
 module.exports={
-    DB:'mongodb://localhost:27017/zocdoc'
+    DB:'mongodb://localhost:27017/docapp'
   }
-  
