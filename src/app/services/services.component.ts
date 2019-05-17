@@ -6,12 +6,12 @@ import {Title,Meta} from '@angular/platform-browser';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-title='Service | DocApp'
+title='Faq | DocApp'
   constructor(private titleService:Title,private meta:Meta ) { }
 
   ngOnInit() {
      this.titleService.setTitle(this.title);
-     this.meta.updateTag({name:'keyword', content : 'Service ZocDoc,Consultation'});
+     this.meta.updateTag({name:'keyword', content : 'Patient/s docapp,Consultation'});
      this.meta.updateTag({name:'description', content : 'consult with your Doctor'});
   }
 

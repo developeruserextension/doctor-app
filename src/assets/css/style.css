@@ -425,7 +425,7 @@ img.header_logo.new__logo {position: relative;left: 14%;}
       text-decoration: none;
   }
 /*end*/
-/*14 - 5 - 2019 */
+/*14 - 5 - 2019 faq */
 #services{padding:40px 0;}
 #services h5{margin-bottom:50px;}
 .inner_tabs{    max-width: 75%;width: 100%;margin: 0 auto !important;}
@@ -433,7 +433,30 @@ img.header_logo.new__logo {position: relative;left: 14%;}
 .inner_tabs .feature-box .fe_box{background:#ddd; height: 100%; padding:20px;}
 .inner_tabs .feature-box .fe_box h6{font-size:20px;}
 .inner_tabs .feature-box .fe_box img{margin-bottom:20px;}
+.service_header > .container{    display: flex; margin-bottom: 50px;}
+.service_logo{    margin-right: 50px;}
+.service_header form{width: 100%;max-width: 50%;     display: flex;}
+.service_header form input{    height: 50px; padding-left: 14px; width: 100%;background-color: rgb(255, 255, 255);  color: rgb(0, 35, 75);  border: 1px solid rgb(135, 135, 145);transition: border .1s linear,background-color .1s linear;  display: inline-block;padding: 0 1rem 0 .75rem;  line-height: 1.875rem;}
+.service_header .navbar ul li a{color:#fff; margin: 0 15px;}
+.service_header .navbar{    background: rgba(6, 176, 154, 1); }
+.service_header form button{width: 128px; height: 50px; border-radius: 0; background: #06b09a;border: #06b09a;}
+.service_header{    padding: 30px 0 0;     background-image: none;}
+.show_dropdown.dropdown {cursor: pointer;}
+ a.faq_dropdown {color: #fff !important;font-weight: 1000;}
+ h6.text-center {color: rgba(6, 176, 154, 1);font-weight: 1000;}
+ .service_logo a {color: #06b09a;font-weight: 1000;font-size: 34px;}
+ .service_logo a:hover {color: #06b09a;font-weight: 1000;font-size: 34px;text-decoration:none;}
+.service_header .navbar-expand-lg .navbar-nav .dropdown-menu{    background: rgba(6, 176, 154, 1);}
+.service_header .navbar-expand-lg .navbar-nav .dropdown-menu a{background: rgba(6, 176, 154, 1);color:#fff;padding: 10px 10px;}
+.service_header .navbar-expand-lg .navbar-nav .dropdown-menu a:hover{background:#fff;color:#27baa7;}
   /*End*/
+  /*Modal css registration 16-05-2018*/
+.modal-content > .container{
+	background:#efefef;
+}
+a.login__here {cursor: pointer;color: #06b09a !important;position: relative;left: 51%;bottom: 40px;font-weight: 1000;}
+  
+  /*Modal css registration End*/
 /* MEDIA QUERY */
 @media(max-width: 1199px){
 #hospital_schedule .box a{font-size: 14px;}

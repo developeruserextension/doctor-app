@@ -18,7 +18,7 @@ export class FormService{
         };
        //console.log(obj);
       // console.log(`${this.uri}`);
-        this.http.post(`${this.uri}/add`, obj).subscribe(res => console.log('Done'));
+        this.http.post(`${this.uri}/add`, obj).subscribe(res => console.log("Done"));
       }
       getForms(email,password){
         const obj1={

@@ -44,6 +44,7 @@ addForm(firstName,lastName,email,password,confirmPassword){
     this.fs.addForm(firstName,lastName,email,password,confirmPassword);
     this.message="You are Successfully registered";
     this.show=true;
+    
     // this.router.navigate(['about'])
   }
 }

@@ -1,4 +1,48 @@
-<app-header></app-header>
+<header class="service_header">
+	<div class="container">
+		<div class="service_logo">
+			<a routerLink="/home">Docapp</a>
+		</div>
+		<form>
+			<input type="text" placeholder="Search our Knowledge Base">
+			<button class="btn btn-primary">Search</button>
+		</form>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			<a class="nav-link faq_dropdown"routerLink="/home"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+			</li>
+			<div ngbDropdown class="d-inline-block show_dropdown">
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle faq_dropdown" id="dropdownbootstrap" ngbDropdownToggle>
+				Help Topics
+			  </a>
+			  <div ngbDropdownMenu aria-labelledby="dropdownbootstrap">
+				<a ngbDropdownItem>About Docapp</a>
+				<a ngbDropdownItem>Data & Privacy</a>
+				<a ngbDropdownItem>Making Appointments</a>
+			  </div>
+			</li>
+			</div>
+			<li class="nav-item">
+				<a class="nav-link faq_dropdown" routerLink="/patient/s" >About Docapp</a>
+			  </li>
+			<li class="nav-item">
+			  <a class="nav-link faq_dropdown" routerLink="/patient/s" tabindex="-1" aria-disabled="true">I'm a Docapp practice</a>
+			</li>
+		  </ul>
+		  
+		</div>
+	</div>
+	  </nav>
+</header>
 <main>
  <app-faq-patients></app-faq-patients>
 </main>

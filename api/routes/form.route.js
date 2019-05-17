@@ -15,7 +15,13 @@ let form=new Form({
 //console.log(form);
 form.save()
 .then(form=>{
+	//res.setHeader('Content-Type', 'application/json');
+	//res.json("yes");
     res.status(200).json({'form':'form is added successfully'})
+	
+   // res.send(JSON.stringify({ a: 1 }));
+	
+	//res.send("Yes");
 // console.log("Form is saved");
 })
 .catch(err => {
