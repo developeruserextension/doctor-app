@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup,FormBuilder, Validators,FormControl} from '@angular/forms';
+import {FormService} from '../../../form.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-join-form',
   templateUrl: './join-form.component.html',
   styleUrls: ['./join-form.component.css']
 })
+
 export class JoinFormComponent implements OnInit {
-  constructor() { }
-  joinForm:FormGroup;
+
+  getStartedForm:FormGroup;
   submitted=false;
+  public button_text: string = 'Get Started';
+
   speciality=[
     {name:'Acupuncturist',value:'Acupuncturist'},
     {name:'Allergist',value:'Allergist'},
@@ -88,19 +93,39 @@ export class JoinFormComponent implements OnInit {
   public scroll(element: any) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
-
-  //joimForm Submitting
-  addjoinForm(firstName,lastName,speciality,mobile,zipcode,email){
-    this.submitted=true;
-    if (this.joinForm.invalid) {
-      return;
-    }
-    if(this.submitted){
-      alert(firstName+""+lastName+""+speciality+""+mobile+""+zipcode+""+email);
-    }
+  constructor(private formBuilder: FormBuilder, private fs: FormService,private router:Router) {
+    this.joinForm();
   }
+  joinForm() {
+    this.getStartedForm=this.formBuilder.group({
+      firstName: [null,Validators.required],
+      lastName: [null,Validators.required],
+      specialities: [null,Validators.required],
+      mobile: [null,[Validators.required,Validators.minLength(10)]],
+      zipcode: [null,[Validators.required , Validators.minLength(6)]],
+      email: [null, [Validators.required , Validators.email]],
+    })
+  }
+  get f(){return this.getStartedForm.controls;}
 
+  joinFormStarted(firstName,lastName,specialities,mobile,zipcode,email){
+    this.submitted=true;
+  if (this.getStartedForm.invalid) {
+    return;
+  }
+  if(this.submitted){
+   this.fs.joinFormStarted(firstName,lastName,specialities,mobile,zipcode,email)
+   if(this.button_text === 'Get Started') { 
+    this.button_text = 'Please wait...'
+  } else {
+    this.button_text = 'Get Started'
+  }
+   setTimeout(()=>{
+    this.router.navigate(['about/join/thankyou']);
+  }, 3000);
+   
+  }
+  }
   ngOnInit() {
   }
 

@@ -11,7 +11,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   providers:[NgbModalConfig,NgbModal]
 })
 export class LoginFormComponent implements OnInit {
- 
+
   submitted=false;
   loginForms: FormGroup;
   constructor(config:NgbModalConfig,private modalService:NgbModal,private fs:FormService,private formBuilder:FormBuilder) {
@@ -29,7 +29,7 @@ export class LoginFormComponent implements OnInit {
     this.submitted=true;
     if(this.submitted){
       this.fs.getForms(email,password);
-      console.log("Your are now login");
+    alert("Your are now login");
     }
   }
   ngOnInit() {}

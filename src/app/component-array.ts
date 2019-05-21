@@ -23,7 +23,7 @@ import { ProviderZocdocComponent } from './about/joinzocdoc/provider-zocdoc/prov
 import { CareerListComponent } from './about/career-list/career-list.component';
 import { CareerImageComponent } from './about/career-list/career-image/career-image.component';
 import { CareerMissionComponent } from './about/career-list/career-mission/career-mission.component';
-
+import { FaqPatientsComponent } from './services/faq-patients/faq-patients.component';
 
 export const modulerouting= [
   HeaderComponent,
@@ -49,5 +49,6 @@ export const modulerouting= [
   ProviderZocdocComponent,
   CareerListComponent,
   CareerImageComponent,
-  CareerMissionComponent
+  CareerMissionComponent,
+  FaqPatientsComponent
 ]

@@ -10,7 +10,7 @@ const app=express();
 
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
-mongoose.connect(config.DB,{useNewUrlParser:true},(err,db)=>{    
+mongoose.connect(config.DB,{useNewUrlParser:true},(err,db)=>{
 if(err){
     console.log(err);
 }
@@ -21,7 +21,7 @@ else{
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/form', formRoute);
+app.use('/', formRoute);
 const port=process.env.PORT || 4000;
 app.listen('4000',()=>{
     console.log('server is listening to 4000');
