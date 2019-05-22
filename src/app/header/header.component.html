@@ -26,10 +26,11 @@
     <div class="middle_header text-center">
         <h1>Feeling meh? Find a doctor.</h1>
         <h6>Search Doctors and Book appointments online, instantly</h6>
+        <form>
           <div class="form-group">
             <!-- <span class="Calender"><i class="fa fa-search format__calender"></i></span> -->
               <mat-form-field class="width doctor_mat">
-                  <input type="text" matInput aria-label="Doctor" class="form-control first_input" [matAutocomplete]="auto" [formControl]="doctorCtrl" required  matTooltip="condition, procedure, doctor name..." placeholder="condition, procedure, doctor name..." matTooltipPosition="after">
+                  <input type="text" matInput aria-label="Doctor"  name="speciality" class="form-control first_input" [matAutocomplete]="auto" [formControl]="doctorCtrl" required  matTooltip="condition, procedure, doctor name..." placeholder="condition, procedure, doctor name..." matTooltipPosition="after" #speciality>
                    <mat-icon class="mat_icon_search">search</mat-icon>
                     <mat-autocomplete #auto="matAutocomplete">
                       <mat-option *ngFor="let doctor of filteredDoctor | async" [value]="doctor.name">
@@ -37,15 +38,14 @@
                       </mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
-
-             <input type="text" class="form-control" id="zipcode" placeholder="Zip code or city" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)">
+             <input type="text" class="form-control" id="zipcode" name="place" placeholder="Zip code or city" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" #place>
              <span class="Calender"><i class="fa fa-map-marker format__calender"></i></span>
-
-              <input type="text" class="form-control" id="insurance_number" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"  placeholder="Choose your Date">
+              <input type="text" class="form-control"  name="appointment_date" id="insurance_number" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"  placeholder="Choose your Date" #appointment_date>
               <span [owlDateTimeTrigger]="dt2" class="Calender"><i class="fa fa-calendar format__calender"></i></span>
               <owl-date-time  [pickerType]="'calendar'" #dt2></owl-date-time>
-             <button type="submit" class="btn btn-primary">Search</button>
+             <button type="submit" class="btn btn-primary" (click)="search_doctor(speciality.value,place.value,appointment_date.value)">Search</button>
           </div>
+        </form>
     </div>
      </div>
           <ng-template #content let-c="close">

@@ -53,7 +53,7 @@ formRoutes.route('/joinforms').post(function(req,res){
     zipcode:req.body.zipcode,
     email:req.body.email
 });
-//console.log(joinform);
+console.log(joinform);
 joinform.save((err,result)=>{
   if(err){
     console.log("unable to save data in Database");
@@ -61,6 +61,11 @@ joinform.save((err,result)=>{
   }
   res.send({success:"Successfully Added new Doctor",status:200})
 })
+
+//get data from Database
+formRoutes.route('/search_doctor').post(function(req,res){
+ alert("hello");
+});
 });
 
 module.exports=formRoutes;

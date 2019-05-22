@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { NgbModalConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { GooglePlaceDirective } from 'ngx-google-places-autocomplete';
-import { FormControl } from '@angular/forms';
+import { FormControl} from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-
+import { Router } from '@angular/router';
+import {FormService} from '../form.service';
 
 export class Doctor {
   constructor(public name: string) {
@@ -25,11 +26,11 @@ length:number;
 doctorCtrl:FormControl;
 filteredDoctor: Observable<any[]>;
 // tslint:disable-next-line: max-line-length
-  constructor(config: NgbModalConfig, private modalService: NgbModal){
+  constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fs:FormService){
     config.backdrop = 'static';
     config.keyboard = false;
   }
- 
+
 
   // routes=[
   //   {linkName:'Home',url:'home'},
@@ -120,8 +121,9 @@ filteredDoctor: Observable<any[]>;
     {name: 'Vascular Surgeon'},
   ];
 
-
-
+  search_doctor(speciality,place,appointment_date){
+    this.fs.search_doctor(speciality,place,appointment_date)
+  }
 
 
   ngOnInit() {

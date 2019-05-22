@@ -5,12 +5,11 @@ export default class Form{
     password:String;
     confirmPassword:String
 }
-export  class joinForm{
+export class joinForm{
     firstName:String;
     lastName:String;
-    specialities:String,
-    mobile:Number,
-    zipcode:Number,
+    specialities:String;
+    mobile:Number;
+    zipcode:Number;
     email:String
-    
 }
