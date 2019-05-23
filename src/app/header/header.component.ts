@@ -122,6 +122,7 @@ filteredDoctor: Observable<any[]>;
   ];
 
   search_doctor(speciality,place,appointment_date){
+    alert(speciality+place+appointment_date);
     this.fs.search_doctor(speciality,place,appointment_date)
   }
 

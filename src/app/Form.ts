@@ -13,3 +13,9 @@ export class joinForm{
     zipcode:Number;
     email:String
 }
+export class searchForm{
+  speciality:String;
+  place:String;
+  date:String;
+
+}

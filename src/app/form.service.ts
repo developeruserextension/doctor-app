@@ -41,6 +41,7 @@ export class FormService{
         console.log(object);
         this.http.post(`${this.uri}/joinforms`, object).subscribe(res => console.log("Done"));
       }
+
       search_doctor(speciality,place,appointment_date){
         const objects={
           speciality:speciality,
@@ -48,6 +49,6 @@ export class FormService{
           appointment_date:appointment_date
         }
         console.log(objects);
-        this.http.post(`${this.uri}/search_doctor`,objects).subscribe(res => console.log("Done"));
+        this.http.post(`${this.uri}/searchdoctor`,objects).subscribe(res => console.log("Done"));
       }
 }
