@@ -4,6 +4,7 @@ import { NgbModalConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -11,9 +12,9 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   providers:[NgbModalConfig,NgbModal]
 })
 export class LoginFormComponent implements OnInit {
-
   submitted=false;
   loginForms: FormGroup;
+
   constructor(config:NgbModalConfig,private modalService:NgbModal,private fs:FormService,private formBuilder:FormBuilder) {
     config.backdrop = 'static';
     config.keyboard = false;
@@ -25,14 +26,14 @@ export class LoginFormComponent implements OnInit {
       password: [null, [Validators.required, Validators.minLength(6)]],
     });
   }
-  getForms(email,password){
+  loginForm(email,password){
     this.submitted=true;
     if(this.submitted){
-      this.fs.getForms(email,password);
-    alert("Your are now login");
+      this.fs.loginForm(email,password);
     }
   }
-  ngOnInit() {}
+  ngOnInit() {
+  }
   show(contentes){
     this.modalService.open(contentes);
   }

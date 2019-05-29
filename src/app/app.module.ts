@@ -10,25 +10,19 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { HttpClientModule} from "@angular/common/http";
-
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { modulerouting } from './component-array';
 import {MaterialModule} from './material.module';
-import { ThankyouComponent } from './about/joinzocdoc/join-form/thankyou/thankyou.component';
-
-
-
-
 
 
 
 @NgModule({
   declarations: [
     modulerouting,
-    AppComponent,
-    ThankyouComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +41,7 @@ import { ThankyouComponent } from './about/joinzocdoc/join-form/thankyou/thankyo
     SlimLoadingBarModule.forRoot(),
     ScrollToModule.forRoot(),
   ],
-  providers: [],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

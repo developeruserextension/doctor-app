@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,10 +5,21 @@
   <base href="/">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="icon" type="image/x-icon" href="assets/images/docapp-logo.png">
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKbVhcX_22R_pRKDYuNA7vox-PtGaDkI&libraries=places&language=en"></script>
-     <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script> -->
+     <style>
+       .app-loading {margin-top: 15%;text-align: center;}
+       .header_loader {font-size: 30px;font-weight: 1000;font-family: sans-serif;color: #465bec;}
+     </style>
 </head>
 <body>
-  <app-root>loading...</app-root>
+  <app-root>
+    <div class="app-loading">
+      <div class="logo">
+        <img src="assets/images/main-loader.svg" height="150px"/>
+      </div>
+      <div class="header_loader">
+          Docapp...
+      </div>
+    </div>
+  </app-root>
 </body>
 </html>

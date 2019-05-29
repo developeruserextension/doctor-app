@@ -1,4 +1,4 @@
-export default class Form{
+export class Form{
     firstName:String;
     lastName:String;
     email:String;
@@ -16,6 +16,6 @@ export class joinForm{
 export class searchForm{
   speciality:String;
   place:String;
-  date:String;
+  date:Date;
 
 }

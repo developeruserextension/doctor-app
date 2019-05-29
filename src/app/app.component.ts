@@ -6,6 +6,7 @@ import {Meta} from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  providers: [SlimLoadingBarService],
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
@@ -30,7 +31,7 @@ export class AppComponent implements OnInit {
       this.slimLoadingBarService.complete();
     }
   }
-  
+
 
   ngOnInit() {
     this.meta.addTag({name:'author', content : 'DocApp'});

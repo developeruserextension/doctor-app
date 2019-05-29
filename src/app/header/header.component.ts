@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import {FormService} from '../form.service';
+import { CookieService } from 'ngx-cookie-service';
+
+declare var AddressFinder: any;
 
 export class Doctor {
   constructor(public name: string) {
@@ -25,8 +28,10 @@ modalReference: any;
 length:number;
 doctorCtrl:FormControl;
 filteredDoctor: Observable<any[]>;
+
+
 // tslint:disable-next-line: max-line-length
-  constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fs:FormService){
+  constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fs:FormService,private cookieService:CookieService){
     config.backdrop = 'static';
     config.keyboard = false;
   }
@@ -123,16 +128,34 @@ filteredDoctor: Observable<any[]>;
 
   search_doctor(speciality,place,appointment_date){
     alert(speciality+place+appointment_date);
-    this.fs.search_doctor(speciality,place,appointment_date)
+    this.fs.search_doctor(speciality,place,appointment_date);
+    this.router.navigate(['search'],{queryParams:{speciality:speciality,place:place,appointment_date:'appointment_date'}});
   }
-
-
   ngOnInit() {
     this.doctorCtrl = new FormControl();
     this.filteredDoctor = this.doctorCtrl.valueChanges
       .pipe(startWith(''),map(doctor => doctor ? this.filterdoctor(doctor) : this.doctor_lis.slice())
     );
+    //Address Finder
+    let script = document.createElement('script');
+    script.src = 'https://api.addressfinder.io/assets/v3/widget.js';
+    script.async = true;
+    script.onload = this.initAf;
+    document.body.appendChild(script);
   }
+  initAf(){
+      let widget = new AddressFinder.Widget(
+        document.getElementById('address_finder'),'9CABYTXQLWUKVE8NF4G3','NZ',
+      {}
+      );
+
+      widget.on("result:select ", function(fullAddress, metaData) {
+        var selected = new this.AddressFinder.NZSelectedAddress(fullAddress, metaData);
+        document.getElementById('address_finder').nodeValue = selected.address_line_1();
+      });
+    }
+
+
   filterdoctor(name: string) {
     return this.doctor_lis.filter(doctor =>
       doctor.name.toLowerCase().indexOf(name.toLowerCase()) === 0);

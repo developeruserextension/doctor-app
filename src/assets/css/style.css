@@ -232,10 +232,6 @@ select.exclude-from-playback.required {
   border-radius: 3px;
   margin: 14px auto 20px;
 }
-/* .docapp_join_form::-webkit-inner-spin-button, .docapp_zipcode::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
   .new__join h2 {
       font-size: 34px;
       line-height: 44px;
@@ -310,6 +306,11 @@ label.label.preField.reqMark {
     margin-top: 170px;
     color: #06b09a;
 }
+.new-join-header.join{    background: transparent;}
+.new-join-header.join .cta-container a.cta{color: #06b09a !important;
+  border-color: #06b09a;  }
+  .new-join-header.join .cta-container a.cta:hover{color: #fff !important;
+    background-color: #06b09a;  }
 .text-col.col-sm.order-sm-last.zocdoc_content h2 {
   font-size: 20px;
   line-height: 29px;
@@ -505,12 +506,38 @@ a.login__here {cursor: pointer;color: #06b09a !important;position: relative;left
   display: inline-block; line-height: 54px;}
   /*17-05-2019 End*/
 /*Thank you Page 21-05-2019*/
-section.thankyou_page {position: relative;top: 100px;color: #06b09a;}
+section.thankyou_page {padding:100px 0;color: #06b09a;}
 img.header_join_logo {width: 17%;position: relative;top: 24px;}
 img.join__logo {width: 7%;}
-span.thankyou__content h3 {font-size: 16px;color:#06b09a;font-family: "sharp-sans-medium", Arial, sans-serif;font-size: 30px;font-weight: 1000;}
-span.thankyou__heading h3 {margin-top: 18px;font-size: 49px;}
+span.thankyou__content h3 {font-size: 16px;color:#06b09a;font-family: "sharp-sans-medium", Arial, sans-serif;font-size: 30px;font-weight: 600;}
+span.thankyou__heading h3 {margin-top: 18px;font-size: 48px; font-weight:900;}
+
 /*End 21-05-2019*/
+
+/* 24 - 5 - 2019 */
+.new-join-header{    background: #27baa7;}
+.new-join-header a.cta{    background-color: transparent;
+    border: solid 1px #fff;}
+.new-join-header a.cta:hover{background-color: #fff; color: #27baa7 !important;}
+#for_page{background: #F5F5F5; padding: 150px 0;}
+.internal_error{    display: flex; justify-content: space-around;}
+.inter_error h3, .inter_error h6{    margin-bottom: 20px;}
+.inter_error a{background: #27baa7; border-color: #27baa7; border-radius: 0; font-size: 20px;}
+.whats_next{margin-bottom:30px;}
+.whats_next ul, .Learnmore ul{  margin-top:15px;  margin-left: 25px;}
+.whats_next ul li, .Learnmore ul li, .whats_next p, .Learnmore p, .whats_next h2, .Learnmore h2{margin-bottom:10px; }
+#whats_learn{background:#F5F5F5; padding:50px 0;}
+.whats_next h2, .Learnmore h2{    color: #06b09a;}
+.whats_next a, .Learnmore a{color:#000;}
+
+/* 27- 5 - 2019 start doctor_login*/
+.login_signup .dropdown-menu{background-color: rgb(255, 255, 255); border-radius:0; padding:10px; left:auto !important; right:0;}
+.login_signup .dropdown-menu li a{display: inline-block;color: #000 !important; border:none; padding: 0 5px; margin:0 5px; font-size:14px; line-height: normal;}
+.login_signup .dropdown-menu li a:hover{display: inline-block;color: #000 !important; border:none; padding: 0 5px; margin:0 5px; font-size:14px; line-height: normal; border-bottom:1px dotted #000}
+.login_signup .dropdown-menu ul:first-child{border-bottom:2px solid #dfdfdf; margin-bottom: 10px; margin-top:10px; padding-bottom: 10px;}
+.login_signup .dropdown-menu li a:hover{background: none; color: #000 !important;}
+.d_head{color: rgb(0, 35, 75); font-size:15px; font-weight: 600; line-height: normal; margin-right:15px;}
+/*End*/
 /* MEDIA QUERY */
 @media(max-width: 1199px){
 #hospital_schedule .box a{font-size: 14px;}

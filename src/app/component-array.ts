@@ -24,6 +24,10 @@ import { CareerListComponent } from './about/career-list/career-list.component';
 import { CareerImageComponent } from './about/career-list/career-image/career-image.component';
 import { CareerMissionComponent } from './about/career-list/career-mission/career-mission.component';
 import { FaqPatientsComponent } from './services/faq-patients/faq-patients.component';
+import { ThankyouComponent } from './about/joinzocdoc/join-form/thankyou/thankyou.component';
+import { SearchDocappComponent } from './search-docapp/search-docapp.component';
+import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+
 
 export const modulerouting= [
   HeaderComponent,
@@ -50,5 +54,8 @@ export const modulerouting= [
   CareerListComponent,
   CareerImageComponent,
   CareerMissionComponent,
-  FaqPatientsComponent
+  FaqPatientsComponent,
+  ThankyouComponent,
+  SearchDocappComponent,
+  DoctorLoginComponent
 ]

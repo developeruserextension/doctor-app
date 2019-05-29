@@ -1,0 +1,43 @@
+<div class="container-fluid new-join-header">
+  <div class="header-container row">
+      <div class="header-col col-sm">
+        <div  class="logo"><a routerLink="/home"><img class="header_logo" src="assets/images/spo-simple-logo.png" alt="DocApp Logo"></a></div>
+          <div class="cta-container">
+              <a   class="cta">List your practice on DocApp</a>
+              <a   class="sign__login__doctor">SignIn / Join</a>
+          </div>
+      </div>
+  </div>
+</div>
+<section class="text-center login_email" >
+  <div class="container">
+    <form>
+  <h3>Log in with email</h3>
+  <div class="form-group">
+    <input type="email" placeholder="email address">
+  </div>
+  <div class="form-group">
+    <input type="password" placeholder="password">
+
+  </div>
+  <button>Login</button>
+  <div class="forget_login text-center">
+    <a routerLink="#">Forgot your password?</a>
+    <a routerLink="" (click)="open(content)">Patient login</a>
+  </div>
+</form>
+</div>
+</section>
+<app-footer></app-footer>
+<ng-template #content let-c="close">
+    <div class="container login__modals">
+    <div class="modal_popup">
+      <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+          <span class="cross" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <app-login-form></app-login-form>
+      </div>
+    </div>
+  </ng-template>

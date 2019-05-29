@@ -1,2 +1,23 @@
-<h1>You have entered wrong url</h1>
-<h1>Page not Found Error code 404</h1>
+<div class="container-fluid new-join-header">
+  <div class="header-container row">
+      <div class="header-col col-sm">
+        <div  class="logo"><a routerLink="/home"><img class="header_logo" src="assets/images/spo-simple-logo.png" alt="DocApp Logo"></a></div>
+          <div class="cta-container">
+              <a [scrollTo]="'#target'" [scrollDuration]="1000"  class="cta">List your practice on DocApp</a>
+          </div>
+      </div>
+  </div>
+</div>
+<section id="for_page">
+	<div class="container">
+		<div class="internal_error">
+			<div class="inter_error">
+				<h3>This is a 404 page.</h3>
+				<h6>That just means 'error'. But it sounds more computery this way.</h6>
+				<a routerLink="/" class="btn btn-primary">Return to the Homepage</a>
+			</div>
+			<img src="assets/images/docapp-logo.png">
+		</div>
+	</div>
+</section>
+<app-footer></app-footer>

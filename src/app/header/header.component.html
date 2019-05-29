@@ -1,32 +1,35 @@
-
 <header>
   <div class="container">
     <nav class="top_header">
       <div class="logo">
         <a routerLink="/home"><img class="header_logo" src="assets/images/spo-simple-logo.png" alt="DocApp"></a>
       </div>
-       <div class="top_right">
-          <ul>
-             <!-- <li><a routeLink="[routes.linkName]">{{routes.url}}</a></li> -->
-                  <li> <a routerLink="/home" class="nav-link" >Home</a></li>
-                  <li> <a routerLink="/about" class="nav-link">About</a></li>
-                  <li> <a routerLink="/patient/s" class="nav-link">faq</a></li>
-                 <div ngbDropdown class="d-inline-block show__menu">
-                  <li> <a id="dropdownBasics" ngbDropdownToggle>Login/SignUp</a></li>
-                 <div ngbDropdownMenu aria-labelledby="dropdownBasics">
-                   <ul>
-                     <li> <a class="dropdown__menu" ngbDropdownItem4  (click)="open(content)">LogIn</a></li>
-                      <li> <a class="dropdown__menu" ngbDropdownItem4   (click)="show(contents)">Signup</a></li>
-                   </ul>
-                  </div>
-              </div>
-          </ul>
-        </div>
+      <div class="top_right">
+        <ul>
+                <li> <a routerLink="/home" class="nav-link" >Home</a></li>
+                <li> <a routerLink="/about" class="nav-link">About</a></li>
+                <li> <a routerLink="/patient/s" class="nav-link">faq</a></li>
+               <div ngbDropdown class="d-inline-block show__menu login_signup">
+                <li class="login_sign"> <a id="dropdownBasics" ngbDropdownToggle>Login/SignUp</a></li>
+               <div ngbDropdownMenu aria-labelledby="dropdownBasics">
+                 <ul>
+                   <li class="d_head">Patients</li>
+                   <li> <a class="dropdown__menu" ngbDropdownItem4  (click)="open(content)">LogIn</a></li>
+                    <li> <a class="dropdown__menu" ngbDropdownItem4   (click)="show(contents)">Signup</a></li>
+                 </ul>
+                 <ul>
+                <li class="d_head">Doctors</li>
+               <li><a routerLink="/signin" [queryParams]="{ provider:1 }" class="nav-link" routerLinkActive="active">Login</a></li>
+               </ul>
+                </div>
+            </div>
+        </ul>
+      </div>
     </nav>
     <div class="middle_header text-center">
         <h1>Feeling meh? Find a doctor.</h1>
         <h6>Search Doctors and Book appointments online, instantly</h6>
-        <form>
+        <form action="/search" method="POST">
           <div class="form-group">
             <!-- <span class="Calender"><i class="fa fa-search format__calender"></i></span> -->
               <mat-form-field class="width doctor_mat">
@@ -38,7 +41,8 @@
                       </mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
-             <input type="text" class="form-control" id="zipcode" name="place" placeholder="Zip code or city" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" #place>
+             <!-- <input type="text" class="form-control" id="zipcode" name="place" placeholder="Zip code or city" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" #place> -->
+             <input type="search"  name="place" class="form-control form-input" id="address_finder" placeholder="Zip code or city" #place/>
              <span class="Calender"><i class="fa fa-map-marker format__calender"></i></span>
               <input type="text" class="form-control"  name="appointment_date" id="insurance_number" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"  placeholder="Choose your Date" #appointment_date>
               <span [owlDateTimeTrigger]="dt2" class="Calender"><i class="fa fa-calendar format__calender"></i></span>

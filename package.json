@@ -37,6 +37,7 @@
     "ng2-scroll-to-el": "^1.2.1",
     "ng2-slim-loading-bar": "^4.0.0",
     "ngx-bootstrap": "^4.0.1",
+    "ngx-cookie-service": "^2.2.0",
     "ngx-google-places-autocomplete": "^2.0.3",
     "ngx-owl-carousel": "^2.0.7",
     "ngx-owl-carousel-o": "^1.1.1",
@@ -45,6 +46,7 @@
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.4.0",
     "tslib": "^1.9.3",
+    "widget": "0.0.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
