@@ -2,14 +2,16 @@ import {Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import {  NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
   })
 export class FormService{
     uri='http://localhost:4000';
-  cookieValue="";
-    constructor(private http:HttpClient,private cookieService:CookieService,private router:Router){}
+    record:any;
+    result:any=[];
+    constructor(private http:HttpClient,private cookieService:CookieService,private router:Router,private NgbModal:NgbModal){}
 
     addForm(firstName,lastName,email,password,confirmPassword){
         const obj={
@@ -30,12 +32,13 @@ export class FormService{
         };
         console.log(obj1);
         this.http.post(`${this.uri}/login`,obj1).subscribe((res) =>{
-          alert('you are now login');
-          var result=JSON.stringify(res);
-          this.cookieService.set( 'Userdata',result);
-          window.location.reload();
-          // this.cookieValue = this.cookieService.get('Userdata');
-          // console.log(this.cookieValue);
+          /*var result = Object.entries(res).map(([k, v]) => ([k, v]));
+          result.push(["login","true"]);
+          console.log(result);*/
+         var patient=JSON.stringify(res);
+         console.log(patient);
+            this.cookieService.set('userdata',patient);
+           this.router.navigate(['patient/medicalteam']);
         },
         (error)=> {
             console.log('error is ', error)

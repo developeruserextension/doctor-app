@@ -16,13 +16,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { modulerouting } from './component-array';
 import {MaterialModule} from './material.module';
+import { MedicalteamComponent } from './patient/medicalteam/medicalteam.component';
 
 
 
 @NgModule({
   declarations: [
     modulerouting,
-    AppComponent
+    AppComponent,
+    MedicalteamComponent
   ],
   imports: [
     BrowserModule,

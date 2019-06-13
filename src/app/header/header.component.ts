@@ -29,7 +29,6 @@ length:number;
 doctorCtrl:FormControl;
 filteredDoctor: Observable<any[]>;
 
-
 // tslint:disable-next-line: max-line-length
   constructor(config: NgbModalConfig, private modalService: NgbModal,private router:Router,private fs:FormService,private cookieService:CookieService){
     config.backdrop = 'static';
@@ -44,9 +43,9 @@ filteredDoctor: Observable<any[]>;
   //   {linkName:'Log in / Sign up',url:'login-signup'},
   // ]
   //google autocomplete code
-  @ViewChild("placesRef") placesRef : GooglePlaceDirective;
-  public handleAddressChange() {
-  }
+  // @ViewChild("placesRef") placesRef : GooglePlaceDirective;
+  // public handleAddressChange() {
+  // }
 
 
         //Routing Components

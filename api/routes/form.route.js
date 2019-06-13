@@ -12,14 +12,14 @@ var joindocForm = mongoose.model('joindocForm', joindocForm);
 formRoutes.route('/login').post(function(req,res){
   var email=req.body.email;
   var password=req.body.password;
-    pateintForm.findOne({email:email,password:password},function(error,results){
-  if(results!=null){
-    if(results.email == email && results.password ==password){
-      return res.json(results);
+    pateintForm.findOne({email:email,password:password},function(error,loginData){
+  if(loginData!=null){
+    if(loginData.email == email && loginData.password ==password){
+      res.json(loginData);
     }
   }
   if(error){
-      return error.json(error);
+     error.json(error);
   }
 
   });

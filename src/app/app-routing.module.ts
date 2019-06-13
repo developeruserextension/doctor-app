@@ -9,6 +9,7 @@ import { CareerListComponent } from './about/career-list/career-list.component';
 import { ThankyouComponent } from './about/joinzocdoc/join-form/thankyou/thankyou.component';
 import { SearchDocappComponent } from './search-docapp/search-docapp.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { MedicalteamComponent } from './patient/medicalteam/medicalteam.component';
 
 const routes: Route[]= [
   { path: '' , redirectTo: '/home',pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Route[]= [
   { path: 'about/join',component: JoinzocdocComponent},
   { path: 'about/join/thankyou', component: ThankyouComponent},
   { path: 'about/career-list', component:CareerListComponent },
+  { path: 'patient/medicalteam', component:MedicalteamComponent},
   { path: 'signin', component:DoctorLoginComponent},
   { path: '**', component: PageNotFoundComponent }
 ];

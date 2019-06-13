@@ -2,7 +2,7 @@
 .login_email h3 {color: rgb(0, 35, 75); margin-bottom: 18px;text-align: center; font-size:18px;}
 .login_email form{    width: 100%;  max-width: 40%;  margin: 0 auto;}
 .login_email form input{width:100%; padding:10px;}
-.login_email form button{    background: rgb(0, 35, 75);  border: none;color: #fff;width: 100%; padding: 10px;
+.login_email form button{    background:#27baa7;  border: none;color: #fff;width: 100%; padding: 10px;
   text-transform: uppercase;font-weight: 600; }
 .forget_login{    display: flex;
   justify-content: center;
